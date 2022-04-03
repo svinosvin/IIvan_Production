@@ -15,7 +15,8 @@
     <Window.DataContext>
         <vm:MainWindowViewModel/>
     </Window.DataContext>
-
+    <Window.Resources>
+    </Window.Resources>
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -24,7 +25,7 @@
             </Grid.RowDefinitions>
 
 
-            <Border CornerRadius="10" Grid.RowSpan="2">
+            <Border CornerRadius="5" Grid.RowSpan="2">
                 <Border.Background>
                     <LinearGradientBrush>
                         <GradientStop Color="#FF1825F3" Offset="0.0"/>
@@ -33,6 +34,12 @@
                     </LinearGradientBrush>
                 </Border.Background>
             </Border>
+            <iconPacks:PackIconMaterial Grid.Row="0" Kind="Close"                                           
+                                        Foreground="White"
+                                        Margin="345,10,0,5"
+                                        Height="21"
+                                        Width="27"/>
+            
             <StackPanel VerticalAlignment="Center">
 
                 <TextBlock Text="Library IIvan"
@@ -40,7 +47,8 @@
                            FontFamily="Segoe Script"
                            FontSize="36"
                            Foreground="White"
-                           HorizontalAlignment="Center"/>
+                           HorizontalAlignment="Center"
+                           Opacity="0.9"/>
             </StackPanel>
 
             <StackPanel Grid.Row="1" >
@@ -96,8 +104,34 @@
 
 
                 <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
-                    <Button Width="100" Height="40" Content="LOGIN" Margin="60,0,60,0"/>
-                    <Button Width="100" Height="40" Content="REGISTER"/>
+                    <Button
+
+                        Width="100"
+                        Height="40" 
+                        Content="LOGIN"
+                        Margin="60,0,60,0" 
+                        Background="#FF0D136D"
+                        BorderBrush="#FFB5B6CB"
+                        BorderThickness="3px"
+                        Opacity=".9"
+                        FontWeight="Bold"                          
+                        
+                        Foreground="White"></Button>
+                    <Button 
+                        Width="100"
+                        Height="40" 
+                        Content="REGISTER" 
+                        Background="#FF0D136D"
+                        BorderBrush="#FFB5B6CB"
+                        BorderThickness="3px"
+                        Opacity="0.9"
+                        Foreground="White"
+                        FontWeight="Bold"                          
+                        Focusable="False"/>
+
+
+
+
                 </StackPanel>
 
             </StackPanel>
