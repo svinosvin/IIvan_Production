@@ -20,8 +20,8 @@
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition Height="173*"/>
+                <RowDefinition Height="277*"/>
             </Grid.RowDefinitions>
 
 
@@ -32,7 +32,7 @@
                         <GradientStop Color="#FF050417" Offset="1"/>
                         <GradientStop Color="#FF0D136F" Offset="0.484"/>
                     </LinearGradientBrush>
-                </Border.Background>  
+                </Border.Background>
             </Border>
             <Button Click="Button_Click" Cursor="Hand" Width="28"  Height="28"  Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Right">
                 <iconPacks:PackIconMaterial Grid.Row="0" Kind="Close"                                           
@@ -41,8 +41,8 @@
                                         Width="25"
                                        />
             </Button>
-            
-            <StackPanel VerticalAlignment="Center">
+
+            <StackPanel VerticalAlignment="Center" Height="56">
 
                 <TextBlock Text="Library IIvan"
                            FontWeight="Light"
@@ -110,12 +110,27 @@
                         Height="2"
                         Background="White"
                         Opacity="0.5"/>
+                <StackPanel
+                    Margin="0 20 0 0" Width="271">
+                    <CheckBox  
+                        Opacity="0.9"
+                        x:Name="checkbox"
+                        Checked="checkbox_Checked"
+                        Unchecked="checkbox_Unchecked"
+                            
+                        Content="Войти как Админ" 
+                        FontFamily="Helvetica" 
+                        FontSize="15px"
+                        Foreground="AliceBlue" Width="252">
 
 
-                <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
+                    </CheckBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0" Height="39">
                     <Button
 
-                        Width="100"
+                        Width="256"
                         Height="40" 
                         Content="LOGIN"
                         Margin="60,0,60,0" 
@@ -126,18 +141,23 @@
                         FontWeight="Bold"                          
                         
                         Foreground="White"></Button>
-                    <Button 
-                        Width="100"
+
+
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0" Height="39">
+                    <Button
+                        x:Name="RegBtn"
+                        Width="256"
                         Height="40" 
-                        Content="REGISTER" 
+                        Content="REGISTRY"
+                        Margin="60,0,60,0" 
                         Background="#FF0D136D"
                         BorderBrush="#FFB5B6CB"
                         BorderThickness="3px"
-                        Opacity="0.9"
-                        Foreground="White"
+                        Opacity=".9"
                         FontWeight="Bold"                          
-                        Focusable="True"/>
-                    
+                        Foreground="White"></Button>
                 </StackPanel>
             </StackPanel>
         </Grid>

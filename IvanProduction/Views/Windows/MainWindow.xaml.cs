@@ -59,5 +59,15 @@ namespace IvanProduction
                 PasswordTB.Password = password;
             }
         }
+
+        private void checkbox_Checked(object sender, RoutedEventArgs e)
+        {
+            RegBtn.Visibility = Visibility.Hidden;
+        }
+
+        private void checkbox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            RegBtn.Visibility = Visibility.Visible;
+        }
     }
 }
