@@ -32,13 +32,15 @@
                         <GradientStop Color="#FF050417" Offset="1"/>
                         <GradientStop Color="#FF0D136F" Offset="0.484"/>
                     </LinearGradientBrush>
-                </Border.Background>
+                </Border.Background>  
             </Border>
-            <iconPacks:PackIconMaterial Grid.Row="0" Kind="Close"                                           
+            <Button Click="Button_Click" Cursor="Hand" Width="28"  Height="28"  Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Right">
+                <iconPacks:PackIconMaterial Grid.Row="0" Kind="Close"                                           
                                         Foreground="White"
-                                        Margin="345,10,0,5"
-                                        Height="21"
-                                        Width="27"/>
+                                        Height="25"
+                                        Width="25"
+                                       />
+            </Button>
             
             <StackPanel VerticalAlignment="Center">
 
@@ -53,7 +55,10 @@
 
             <StackPanel Grid.Row="1" >
                 <StackPanel Orientation="Horizontal">
-                    <TextBox  FontFamily="Helvetica" 
+                    <TextBox x:Name="LoginTB"
+                             GotFocus="TextBox_GotFocus"
+                             LostFocus="TextBox_LostFocus"
+                             FontFamily="Helvetica" 
                              FontWeight="Light"
                              Text="Username"
                              FontSize="20"
@@ -79,7 +84,11 @@
 
 
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
-                    <PasswordBox FontFamily="Helvetica"
+                    <PasswordBox 
+                             x:Name="PasswordTB"
+                             GotFocus="PasswordTB_GotFocus"
+                             LostFocus="PasswordTB_LostFocus"
+                             FontFamily="Helvetica"
                              FontWeight="Light"
                              Password="Password"
                              FontSize="20"
@@ -127,13 +136,9 @@
                         Opacity="0.9"
                         Foreground="White"
                         FontWeight="Bold"                          
-                        Focusable="False"/>
-
-
-
-
+                        Focusable="True"/>
+                    
                 </StackPanel>
-
             </StackPanel>
         </Grid>
     </Grid>
