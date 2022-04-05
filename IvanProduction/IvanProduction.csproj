@@ -276,13 +276,9 @@
     </Compile>
     <Compile Include="Data\AppDbContext.cs" />
     <Compile Include="Data\DesignTimeDbContextFactory.cs" />
-    <Compile Include="Migrations\20220405110528_Library.cs" />
-    <Compile Include="Migrations\20220405110528_Library.designer.cs">
-      <DependentUpon>20220405110528_Library.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20220405114050_DeleteBook.cs" />
-    <Compile Include="Migrations\20220405114050_DeleteBook.designer.cs">
-      <DependentUpon>20220405114050_DeleteBook.cs</DependentUpon>
+    <Compile Include="Migrations\20220405213604_initial.cs" />
+    <Compile Include="Migrations\20220405213604_initial.designer.cs">
+      <DependentUpon>20220405213604_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\AppDbContextModelSnapshot.cs" />
     <Compile Include="Model\Account.cs" />

@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IvanProduction.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220405114050_DeleteBook")]
-    partial class DeleteBook
+    [Migration("20220405213604_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
