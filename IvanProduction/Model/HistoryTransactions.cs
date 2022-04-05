@@ -12,6 +12,9 @@ namespace IvanProduction.Model
         public Account Account { get; set; }
         public bool ActiveTransaction { get; set; }
         public Book Book { get; set; }
+        public DateTime TakeTime { get; set; }
+        public DateTime ReturnTime { get; set; }
+
 
     }
 }
