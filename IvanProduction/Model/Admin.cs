@@ -9,5 +9,6 @@ namespace IvanProduction.Model
     public class Admin : User
     {
         public string JobPosition { get; set; }
+
     }
 }
