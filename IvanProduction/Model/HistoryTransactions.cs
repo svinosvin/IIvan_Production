@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace IvanProduction.Model
 {
-    public class HistoryTransactions
+    public class HistoryTransactions:DomainObject
     {
-        public int Id { get; set; }
+ 
         public Account Account { get; set; }
         public bool ActiveTransaction { get; set; }
         public Book Book { get; set; }

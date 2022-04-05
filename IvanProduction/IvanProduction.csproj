@@ -275,15 +275,16 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Data\AppDbContext.cs" />
-    <Compile Include="Data\DesignTimeDbContextFactory.cs" />
-    <Compile Include="Migrations\20220405213604_initial.cs" />
-    <Compile Include="Migrations\20220405213604_initial.designer.cs">
-      <DependentUpon>20220405213604_initial.cs</DependentUpon>
+    <Compile Include="Data\AppDbContextFactory.cs" />
+    <Compile Include="Migrations\20220405220454_initial.cs" />
+    <Compile Include="Migrations\20220405220454_initial.designer.cs">
+      <DependentUpon>20220405220454_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\AppDbContextModelSnapshot.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="Model\Admin.cs" />
     <Compile Include="Model\Book.cs" />
+    <Compile Include="Model\DomainObject.cs" />
     <Compile Include="Model\HistoryTransactions.cs" />
     <Compile Include="Model\Status.cs" />
     <Compile Include="Model\User.cs" />

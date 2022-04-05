@@ -41,20 +41,6 @@ namespace IvanProduction.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Status",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(nullable: true),
-                    Score = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Status", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
                 {
@@ -78,7 +64,8 @@ namespace IvanProduction.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     AccountHolderId = table.Column<int>(nullable: true),
-                    StatusId = table.Column<int>(nullable: true)
+                    Status_Name = table.Column<string>(nullable: true),
+                    Status_Score = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -87,12 +74,6 @@ namespace IvanProduction.Migrations
                         name: "FK_Accounts_Users_AccountHolderId",
                         column: x => x.AccountHolderId,
                         principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Accounts_Status_StatusId",
-                        column: x => x.StatusId,
-                        principalTable: "Status",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -132,11 +113,6 @@ namespace IvanProduction.Migrations
                 column: "AccountHolderId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Accounts_StatusId",
-                table: "Accounts",
-                column: "StatusId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Histories_AccountId",
                 table: "Histories",
                 column: "AccountId");
@@ -163,9 +139,6 @@ namespace IvanProduction.Migrations
 
             migrationBuilder.DropTable(
                 name: "Users");
-
-            migrationBuilder.DropTable(
-                name: "Status");
         }
     }
 }

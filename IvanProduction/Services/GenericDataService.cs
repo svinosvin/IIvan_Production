@@ -1,4 +1,8 @@
-﻿using System;
+﻿using IvanProduction.Data;
+using IvanProduction.Model;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,31 +10,69 @@ using System.Threading.Tasks;
 
 namespace IvanProduction.Services
 {
-    public class GenericDataService<T> : IDataService<T>
+    public class GenericDataService<T> : IDataService<T> where T : DomainObject
     {
-        public Task<T> Create(T entity)
+        private readonly AppDbContextFactory _contextFactory;
+
+        public GenericDataService(AppDbContextFactory appDbContext)
         {
-            throw new NotImplementedException();
+            _contextFactory = appDbContext;
         }
 
-        public Task<bool> Delete(int id)
+        public async Task<T> Create(T entity)
         {
-            throw new NotImplementedException();
+
+            using (AppDbContext context = _contextFactory.CreateDbContext())
+            {
+
+               EntityEntry<T> createdResult =  await context.Set<T>().AddAsync(entity);
+               await context.SaveChangesAsync();
+               return createdResult.Entity;
+            }
         }
 
-        public Task<T> Get(int id)
+        public async Task<bool> Delete(int id)
         {
-            throw new NotImplementedException();
+            using (AppDbContext context = _contextFactory.CreateDbContext())
+            {
+
+                T entityEntry = await context.Set<T>().FirstOrDefaultAsync((x) => x.Id == id);
+                context.Set<T>().Remove(entityEntry);
+                await context.SaveChangesAsync();
+                return true;
+            }
         }
 
-        public Task<IEnumerable<T>> GetAll()
+        public async Task<T> Get(int id)
         {
-            throw new NotImplementedException();
+
+            using (AppDbContext context = _contextFactory.CreateDbContext())
+            {
+                T entity = await context.Set<T>().FirstOrDefaultAsync(x => x.Id == id);
+                return entity;
+            }
         }
 
-        public Task<T> Update(int id, T entity)
+        public async Task<IEnumerable<T>> GetAll()
         {
-            throw new NotImplementedException();
+            using (AppDbContext context = _contextFactory.CreateDbContext())
+            {
+                IEnumerable<T> entity = await context.Set<T>().ToListAsync();
+                return entity;
+            }
+        }
+
+        public async Task<T> Update(int id, T entity)
+        {
+            using (AppDbContext context = _contextFactory.CreateDbContext())
+            {
+                entity.Id = id;
+                context.Set<T>().Update(entity);
+                await context.SaveChangesAsync();
+                return entity;
+
+
+            }
         }
     }
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace IvanProduction.Model
 {
-    public class Admin 
+    public class Admin :DomainObject
     {
-        public int Id { get; set; }
+        
         public int Email { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }

@@ -25,14 +25,9 @@ namespace IvanProduction.Migrations
                     b.Property<int?>("AccountHolderId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("StatusId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("Id");
 
                     b.HasIndex("AccountHolderId");
-
-                    b.HasIndex("StatusId");
 
                     b.ToTable("Accounts");
                 });
@@ -116,23 +111,6 @@ namespace IvanProduction.Migrations
                     b.ToTable("Histories");
                 });
 
-            modelBuilder.Entity("IvanProduction.Model.Status", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("Score")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Status");
-                });
-
             modelBuilder.Entity("IvanProduction.Model.User", b =>
                 {
                     b.Property<int>("Id")
@@ -165,9 +143,24 @@ namespace IvanProduction.Migrations
                         .WithMany()
                         .HasForeignKey("AccountHolderId");
 
-                    b.HasOne("IvanProduction.Model.Status", "Status")
-                        .WithMany()
-                        .HasForeignKey("StatusId");
+                    b.OwnsOne("IvanProduction.Model.Status", "Status", b1 =>
+                        {
+                            b1.Property<int>("AccountId")
+                                .HasColumnType("INTEGER");
+
+                            b1.Property<string>("Name")
+                                .HasColumnType("TEXT");
+
+                            b1.Property<int>("Score")
+                                .HasColumnType("INTEGER");
+
+                            b1.HasKey("AccountId");
+
+                            b1.ToTable("Accounts");
+
+                            b1.WithOwner()
+                                .HasForeignKey("AccountId");
+                        });
                 });
 
             modelBuilder.Entity("IvanProduction.Model.HistoryTransactions", b =>

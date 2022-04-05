@@ -1,4 +1,6 @@
-﻿using System;
+﻿using IvanProduction.Model;
+using IvanProduction.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,7 +27,11 @@ namespace IvanProduction
         public MainWindow()
         {
             InitializeComponent();
+            IDataService<Book> dataService = new GenericDataService<Book>(new IvanProduction.Data.AppDbContextFactory());
+            dataService.Create(new Book {  Author = "Ad", Count = 321});
+            int f = dataService.GetAll().Result.Count();
            
+
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {

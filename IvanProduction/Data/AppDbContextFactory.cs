@@ -8,12 +8,13 @@ using System.Threading.Tasks;
 
 namespace IvanProduction.Data
 {
-    public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
+    public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
     {
-        public AppDbContext CreateDbContext(string[] args)
+        public AppDbContext CreateDbContext(string[] args = null)
         {
             var options = new DbContextOptionsBuilder<AppDbContext>();
-            options.UseSqlite("Data Source=Library.db");
+            options.UseSqlite(@"Data Source=G:\Курсовой проект\IvanProduction\Library.db");
+            Console.WriteLine(options.IsConfigured);
             return new AppDbContext(options.Options);
         }
     }
