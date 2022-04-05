@@ -275,6 +275,15 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Data\AppDbContext.cs" />
+    <Compile Include="Migrations\20220405110528_Library.cs" />
+    <Compile Include="Migrations\20220405110528_Library.designer.cs">
+      <DependentUpon>20220405110528_Library.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20220405114050_DeleteBook.cs" />
+    <Compile Include="Migrations\20220405114050_DeleteBook.designer.cs">
+      <DependentUpon>20220405114050_DeleteBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\AppDbContextModelSnapshot.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="Model\Admin.cs" />
     <Compile Include="Model\Book.cs" />
