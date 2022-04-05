@@ -275,6 +275,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Data\AppDbContext.cs" />
+    <Compile Include="Data\DesignTimeDbContextFactory.cs" />
     <Compile Include="Migrations\20220405110528_Library.cs" />
     <Compile Include="Migrations\20220405110528_Library.designer.cs">
       <DependentUpon>20220405110528_Library.cs</DependentUpon>
@@ -290,6 +291,7 @@
     <Compile Include="Model\HistoryTransactions.cs" />
     <Compile Include="Model\Status.cs" />
     <Compile Include="Model\User.cs" />
+    <Compile Include="Services\GenericDataService.cs" />
     <Compile Include="Services\IDataService.cs" />
     <Compile Include="ViewModels\Base\ViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />

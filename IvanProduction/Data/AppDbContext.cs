@@ -15,15 +15,10 @@ namespace IvanProduction.Data
         public DbSet<HistoryTransactions> Histories { get; set; }
         public DbSet<Book> Books { get; set; }
         public DbSet<Admin> Admins { get; set; }
-        public AppDbContext() => Database.EnsureCreated();
+        public AppDbContext(DbContextOptions options):base(options) => Database.EnsureCreated();
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-           
+            base.OnModelCreating(modelBuilder);
         }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlite("Data Source=Library.db");
-        }
-
     }
 }
