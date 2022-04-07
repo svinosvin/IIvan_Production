@@ -13,7 +13,7 @@ namespace IvanProduction.Data
         public AppDbContext CreateDbContext(string[] args = null)
         {
             var options = new DbContextOptionsBuilder<AppDbContext>();
-            options.UseSqlite(@"Data Source=G:\Курсовой проект\IvanProduction\Library.db");
+            options.UseSqlite(@"Data Source=Library.db");
             Console.WriteLine(options.IsConfigured);
             return new AppDbContext(options.Options);
         }

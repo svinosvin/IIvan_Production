@@ -27,9 +27,6 @@ namespace IvanProduction
         public MainWindow()
         {
             InitializeComponent();
-            IDataService<Book> dataService = new GenericDataService<Book>(new IvanProduction.Data.AppDbContextFactory());
-            dataService.Create(new Book {  Author = "Ad", Count = 321});
-            int f = dataService.GetAll().Result.Count();
            
 
         }
