@@ -20,14 +20,13 @@ namespace IvanProduction
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Login : Window
     {
         private const string login = "Username";
         private const string password = "Password";
-        public MainWindow()
+        public Login()
         {
-            InitializeComponent();
-           
+            InitializeComponent();    
 
         }
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -8,8 +8,8 @@ namespace IvanProduction
         protected override void OnStartup(StartupEventArgs e)
         {
 
-            Window window = new MainWindow();
-            window.Show();
+            //Window window = new MainWindow();
+            //window.Show();
             base.OnStartup(e);
         }
     }

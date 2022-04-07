@@ -1,13 +1,11 @@
-﻿<Window x:Class="IvanProduction.MainWindow"
+﻿<Window x:Class="IvanProduction.Login"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006
 "       xmlns:vm="clr-namespace:IvanProduction.ViewModels"    
         xmlns:l="clr-namespace:IvanProduction"
-
-        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
-        
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"   
         Title="MainWindow" Height="450" Width="380"
         AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
@@ -132,7 +130,7 @@
 
                         Width="256"
                         Height="40" 
-                        Content="LOGIN"
+                        Content="Вход"
                         Margin="60,0,60,0" 
                         Background="#FF0D136D"
                         BorderBrush="#FFB5B6CB"
@@ -150,7 +148,7 @@
                         x:Name="RegBtn"
                         Width="256"
                         Height="40" 
-                        Content="REGISTRY"
+                        Content="Регистрация"
                         Margin="60,0,60,0" 
                         Background="#FF0D136D"
                         BorderBrush="#FFB5B6CB"
