@@ -267,6 +267,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Comands\UpdateCurrentViewModelCommand.cs" />
+    <Compile Include="Contols\BookCard.xaml.cs">
+      <DependentUpon>BookCard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Contols\NavigationBar.xaml.cs">
       <DependentUpon>NavigationBar.xaml</DependentUpon>
     </Compile>
@@ -279,12 +282,16 @@
     <Compile Include="Views\UserContols\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\UserContols\Profile.xaml.cs">
-      <DependentUpon>Profile.xaml</DependentUpon>
+    <Compile Include="Views\UserContols\ProfileView.xaml.cs">
+      <DependentUpon>ProfileView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Windows\UserMainWindow.xaml.cs">
       <DependentUpon>UserMainWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Contols\BookCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Contols\NavigationBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -293,11 +300,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Styles\NavigationBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\UserContols\HomeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\UserContols\Profile.xaml">
+    <Page Include="Views\UserContols\ProfileView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

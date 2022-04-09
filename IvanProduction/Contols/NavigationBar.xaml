@@ -13,8 +13,11 @@
             <RowDefinition Height="Auto" ></RowDefinition>
             <RowDefinition Height="Auto" ></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBlock Text="Library IIvan" Grid.Row="0" Background="{StaticResource BrushPrimary1}"/>
-        <Grid Grid.Row="1" Background="{StaticResource BrushPrimary2}">
+        <TextBlock Text="Library IIvan" Grid.Row="0" Foreground="White" Padding="5" FontSize="25" Background="{StaticResource BrushPrimary1}"/>
+        <Grid RenderOptions.EdgeMode="Aliased" Grid.Row="1" Background="{StaticResource BrushPrimary2}">
+            <Grid.Resources >
+                <Style TargetType="RadioButton" BasedOn="{StaticResource NavButton}"/>
+            </Grid.Resources>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
@@ -23,11 +26,11 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <RadioButton Grid.Column="0" Content="Главная" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Home}"/>
-            <RadioButton Grid.Column="1" Content="История"/>
-            <RadioButton Grid.Column="2" Content="Профиль" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Profile}"/>
-            <RadioButton Grid.Column="3" Content="О нас"/>
-            <RadioButton Grid.Column="5" Content="Выход" Margin="0 0 5 0"/>
+            <RadioButton Grid.Column="0" Content="Home" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Home}"/>
+            <RadioButton Grid.Column="1" Content="History"/>
+            <RadioButton Grid.Column="2" Content="Profile" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Profile}"/>
+            <RadioButton Grid.Column="3" Content="About"/>
+            <RadioButton Grid.Column="5" Content="Exit" Margin="0 0 5 0"/>
         </Grid>
     </Grid>
 </UserControl>

@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace IvanProduction.Views.UserContols
+namespace IvanProduction.Contols
 {
     /// <summary>
-    /// Логика взаимодействия для Profile.xaml
+    /// Логика взаимодействия для BookCard.xaml
     /// </summary>
-    public partial class Profile : UserControl
+    public partial class BookCard : UserControl
     {
-        public Profile()
+        public BookCard()
         {
             InitializeComponent();
         }

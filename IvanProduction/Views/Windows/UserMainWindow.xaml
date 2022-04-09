@@ -12,6 +12,7 @@
        <vm:UserMainWindowView/>
     </Window.DataContext>
     <Grid>
+       
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>

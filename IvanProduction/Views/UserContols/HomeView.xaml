@@ -4,9 +4,45 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:IvanProduction.Views.UserContols"
+             xmlns:controls="clr-namespace:IvanProduction.Contols"
+             xmlns:vm="clr-namespace:IvanProduction.ViewModels"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             
+             d:DesignHeight="450" d:DesignWidth="800" >
     <Grid>
-        <TextBlock Text="Home"/>
+        <Grid.DataContext>
+            <vm:HomeViewModel/>
+        </Grid.DataContext>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+       
+        <ListView x:Name="listviewUsers" HorizontalAlignment="Stretch"  
+                  Margin="10,60,10,10" VerticalAlignment="Stretch" ItemsSource="{Binding Book}">
+            
+            <ListView.View>
+                <GridView>
+                    
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" 
+                      Header="Name" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Author}" 
+                      Header="Author" Width="300"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Count}" 
+                      Header="Count" Width="200"></GridViewColumn>
+                    <!--<GridViewColumn Header="Image" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Path=Image}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>-->
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
+
     </Grid>
 </UserControl>
