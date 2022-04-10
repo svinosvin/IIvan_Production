@@ -7,7 +7,8 @@
         xmlns:controls="clr-namespace:IvanProduction.Contols"
         xmlns:vm="clr-namespace:IvanProduction.ViewModels"
         mc:Ignorable="d"
-        Title="UserMainWindow" Height="450" Width="800">
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Title="UserMainWindow" Height="590" Width="944">
     <Window.DataContext>
        <vm:UserMainWindowView/>
     </Window.DataContext>

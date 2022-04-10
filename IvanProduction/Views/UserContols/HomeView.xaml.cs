@@ -23,6 +23,7 @@ namespace IvanProduction.Views.UserContols
         public HomeView()
         {
             InitializeComponent();
+
         }
     }
 }

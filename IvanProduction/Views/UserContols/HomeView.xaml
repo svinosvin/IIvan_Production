@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:IvanProduction.Views.UserContols"
              xmlns:controls="clr-namespace:IvanProduction.Contols"
              xmlns:vm="clr-namespace:IvanProduction.ViewModels"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
              mc:Ignorable="d" 
              
              d:DesignHeight="450" d:DesignWidth="800" >
@@ -18,31 +19,55 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-       
-        <ListView x:Name="listviewUsers" HorizontalAlignment="Stretch"  
-                  Margin="10,60,10,10" VerticalAlignment="Stretch" ItemsSource="{Binding Book}">
-            
+
+        <controls:BookCard Margin="10 50 300 2" Grid.Row="0" DataContext="{Binding ElementName=listviewUsers, Path=SelectedItem}"/>
+
+        <ListView MaxHeight="250" 
+                  ScrollViewer.CanContentScroll="False" 
+                  ScrollViewer.VerticalScrollBarVisibility="Visible"
+                  Grid.Row="1"
+                  x:Name="listviewUsers" 
+                  Margin="10 50"  
+                  HorizontalAlignment="Left"
+                  ItemsSource="{Binding Book}" 
+                  FontFamily="Book Antiqua" FontSize="16" FontWeight="Normal"
+                  IsSynchronizedWithCurrentItem="False" 
+                  Background="#FFA7D8CE" Width="696" Grid.RowSpan="2">
+
             <ListView.View>
-                <GridView>
-                    
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" 
-                      Header="Name" Width="100"/>
+                <GridView >
+                    <GridViewColumn  DisplayMemberBinding="{Binding Path=Name}" 
+                      Header="Name" Width="200"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Author}" 
-                      Header="Author" Width="300"/>
+                      Header="Author" Width="200"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Count}" 
-                      Header="Count" Width="200"></GridViewColumn>
-                    <!--<GridViewColumn Header="Image" Width="100">
+                      Header="Count" Width="100"></GridViewColumn>
+                    <GridViewColumn Header="" Width="100">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Image Source="{Binding Path=Image}"/>
+                                <Button Padding="4">
+                                    Получить
+                                </Button>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
-                    </GridViewColumn>-->
+                    </GridViewColumn>
+                    <GridViewColumn Header="" Width="69">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+
+                                <CheckBox BorderBrush="{StaticResource BrushPrimary1}">
+                                    <iconPacks:PackIconMaterial Kind="Star"
+                                                
+                                                VerticalAlignment="Center" 
+                                                HorizontalAlignment="Center" 
+                                                Foreground="Gray"/>
+                                </CheckBox>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
-
-
 
     </Grid>
 </UserControl>

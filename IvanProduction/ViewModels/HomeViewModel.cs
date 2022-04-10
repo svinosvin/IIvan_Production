@@ -17,6 +17,15 @@ namespace IvanProduction.ViewModels
             Book.Add(new Book { Author = "dsa", Count = 5, Id = 1, Name = "dsada" });
             Book.Add(new Book { Author = "dsa", Count = 5, Id = 1, Name = "dsada" });
             Book.Add(new Book { Author = "dsa", Count = 5, Id = 1, Name = "dsada" });
+            Book.Add(new Book { Author = "dsa", Count = 5, Id = 1, Name = "dsada" });
+            Book.Add(new Book { Author = "dsa", Count = 5, Id = 1, Name = "dsada" });
+            Book.Add(new Book { Author = "dsa", Count = 5, Id = 1, Name = "dsada" });
+            Book.Add(new Book { Author = "dsa", Count = 5, Id = 1, Name = "dsada" });
+            Book.Add(new Book { Author = "dsa", Count = 5, Id = 1, Name = "dsada" });
+            Book.Add(new Book { Author = "dsa", Count = 5, Id = 1, Name = "dsada" });
+            Book.Add(new Book { Author = "dsa", Count = 5, Id = 1, Name = "dsada" });
+            Book.Add(new Book { Author = "dsa", Count = 5, Id = 1, Name = "dsada" });
+
         }
     }
 
