@@ -1,4 +1,6 @@
-﻿using System;
+﻿using IvanProduction.Model;
+using IvanProduction.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,10 +22,12 @@ namespace IvanProduction.Views.UserContols
     /// </summary>
     public partial class HomeView : UserControl
     {
+
+        public IDataService<Book> dataService; 
         public HomeView()
         {
             InitializeComponent();
-
+           
         }
     }
 }

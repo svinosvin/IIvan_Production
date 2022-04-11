@@ -20,7 +20,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <controls:BookCard Margin="10 50 300 2" Grid.Row="0" DataContext="{Binding ElementName=listviewUsers, Path=SelectedItem}"/>
+        <controls:BookCard Margin="10,50,300,0" Grid.Row="0" DataContext="{Binding ElementName=listviewUsers, Path=SelectedItem}"/>
 
         <ListView MaxHeight="250" 
                   ScrollViewer.CanContentScroll="False" 
@@ -35,8 +35,8 @@
                   Background="#FFA7D8CE" Width="696" Grid.RowSpan="2">
 
             <ListView.View>
-                <GridView >
-                    <GridViewColumn  DisplayMemberBinding="{Binding Path=Name}" 
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" 
                       Header="Name" Width="200"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Author}" 
                       Header="Author" Width="200"/>
@@ -45,8 +45,8 @@
                     <GridViewColumn Header="" Width="100">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Padding="4">
-                                    Получить
+                                <Button Foreground="White" Background="#FF14834B" Padding="4">
+                                    Добавить
                                 </Button>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -54,10 +54,8 @@
                     <GridViewColumn Header="" Width="69">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-
                                 <CheckBox BorderBrush="{StaticResource BrushPrimary1}">
                                     <iconPacks:PackIconMaterial Kind="Star"
-                                                
                                                 VerticalAlignment="Center" 
                                                 HorizontalAlignment="Center" 
                                                 Foreground="Gray"/>

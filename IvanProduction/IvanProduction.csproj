@@ -273,6 +273,7 @@
     <Compile Include="Contols\NavigationBar.xaml.cs">
       <DependentUpon>NavigationBar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\ModulesEvery\Elements.cs" />
     <Compile Include="Model\ObservableObject.cs" />
     <Compile Include="State\Navigation\INavigation.cs" />
     <Compile Include="State\Navigation\Navigator.cs" />

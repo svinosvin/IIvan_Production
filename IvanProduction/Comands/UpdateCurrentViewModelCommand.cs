@@ -42,7 +42,6 @@ namespace IvanProduction.Comands
                         break;
                     case ViewType.About: break;
 
-
                 }
             }
             
