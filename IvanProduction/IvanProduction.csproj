@@ -273,13 +273,31 @@
     <Compile Include="Contols\NavigationBar.xaml.cs">
       <DependentUpon>NavigationBar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\ModulesEvery\Elements.cs" />
+    <Compile Include="Migrations\20220411151634_StringEmail.cs" />
+    <Compile Include="Migrations\20220411151634_StringEmail.designer.cs">
+      <DependentUpon>20220411151634_StringEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20220411151823_StringEmail1.cs" />
+    <Compile Include="Migrations\20220411151823_StringEmail1.designer.cs">
+      <DependentUpon>20220411151823_StringEmail1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ModelsStatic\Elements.cs" />
     <Compile Include="Model\ObservableObject.cs" />
+    <Compile Include="Services\AccountDataService.cs" />
+    <Compile Include="Services\HistoryTransactionsDataService.cs" />
     <Compile Include="State\Navigation\INavigation.cs" />
     <Compile Include="State\Navigation\Navigator.cs" />
+    <Compile Include="ViewModels\AboutViewModel.cs" />
+    <Compile Include="ViewModels\HistoryViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
     <Compile Include="ViewModels\ProfileViewModel.cs" />
     <Compile Include="ViewModels\UserMainWindowView.cs" />
+    <Compile Include="Views\UserContols\AboutView.xaml.cs">
+      <DependentUpon>AboutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserContols\HistoryView.xaml.cs">
+      <DependentUpon>HistoryView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserContols\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
     </Compile>
@@ -302,6 +320,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Styles\NavigationBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserContols\AboutView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserContols\HistoryView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

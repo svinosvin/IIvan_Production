@@ -36,11 +36,15 @@ namespace IvanProduction.Comands
                     case ViewType.Home:  
                         _navigator.CurrentViewModel = new HomeViewModel();
                         break;
-                    case ViewType.History: break;
+                    case ViewType.History:
+                        _navigator.CurrentViewModel = new HistoryViewModel();
+                        break;
                     case ViewType.Profile:
                         _navigator.CurrentViewModel = new ProfileViewModel();
                         break;
-                    case ViewType.About: break;
+                    case ViewType.About:
+                        _navigator.CurrentViewModel = new AboutViewModel(); 
+                        break;
 
                 }
             }

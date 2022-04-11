@@ -1,4 +1,5 @@
 ﻿using IvanProduction.Model;
+using IvanProduction.Model.ModelsStatic;
 using IvanProduction.Services;
 using System;
 using System.Collections.Generic;
@@ -23,11 +24,17 @@ namespace IvanProduction.Views.UserContols
     public partial class HomeView : UserControl
     {
 
-        public IDataService<Book> dataService; 
+        private List< Book> Book { get; set; }
+        
         public HomeView()
         {
             InitializeComponent();
-           
+            UpdateTable();  
+        }
+        public void UpdateTable()
+        {
+            Book = Elements.BooksElements.GetAll().Result.Where(x=>x.Count>=1).ToList();
+            listviewUsers.ItemsSource = Book;
         }
     }
 }
