@@ -17,9 +17,9 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <controls:BookCard Margin="10,50,300,0" Grid.Row="0" DataContext="{Binding ElementName=listviewUsers, Path=SelectedItem}"/>
+        <controls:BookCard Margin="10,30,300,0" Grid.Row="0" DataContext="{Binding ElementName=listviewUsers, Path=SelectedItem}"/>
 
-        <ListView MaxHeight="250" 
+        <ListView MaxHeight="200" 
                   ScrollViewer.CanContentScroll="False" 
                   ScrollViewer.VerticalScrollBarVisibility="Visible"
                   Grid.Row="1"

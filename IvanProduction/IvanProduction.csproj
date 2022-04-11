@@ -281,6 +281,10 @@
     <Compile Include="Migrations\20220411151823_StringEmail1.designer.cs">
       <DependentUpon>20220411151823_StringEmail1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20220411193016_addDescription.cs" />
+    <Compile Include="Migrations\20220411193016_addDescription.designer.cs">
+      <DependentUpon>20220411193016_addDescription.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\ModelsStatic\Elements.cs" />
     <Compile Include="Model\ObservableObject.cs" />
     <Compile Include="Services\AccountDataService.cs" />

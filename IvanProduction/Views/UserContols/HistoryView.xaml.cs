@@ -1,17 +1,8 @@
-﻿using System;
+﻿using IvanProduction.Model;
+using IvanProduction.ViewModels;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace IvanProduction.Views.UserContols
 {
@@ -20,9 +11,17 @@ namespace IvanProduction.Views.UserContols
     /// </summary>
     public partial class HistoryView : UserControl
     {
+        private List<HistoryTransactions> historyTransactions = UserMainWindowView.ActiveUser.historyTransactions.ToList();
         public HistoryView()
         {
             InitializeComponent();
+            UpdateTable();
+            
+        }
+        public void UpdateTable()
+        {
+
+            listviewHistory.ItemsSource = historyTransactions;
         }
     }
 }

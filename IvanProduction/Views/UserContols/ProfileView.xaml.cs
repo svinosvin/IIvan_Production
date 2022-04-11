@@ -1,4 +1,7 @@
-﻿using System;
+﻿using IvanProduction.Model;
+using IvanProduction.ViewModels;
+using IvanProduction.Views.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +23,25 @@ namespace IvanProduction.Views.UserContols
     /// </summary>
     public partial class ProfileView : UserControl
     {
+        public Account Account { get; set; } = UserMainWindowView.ActiveUser;
         public ProfileView()
         {
             InitializeComponent();
+            form1.DataContext = Account;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            User user = new User { Id = Account.AccountHolder.Id, Email = Email.Text.ToString(),
+                Name = Name.Text.ToString(),
+                Password = Password.Text.ToString(),
+                Username = Username.Text.ToString(),
+                Surname = Surname.Text.ToString()
+            };
+            UserMainWindowView.UpdateAccount(user); 
+            
+          } 
+         
         }
     }
-}
+

@@ -7,9 +7,37 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <DataGrid>
-            
-        </DataGrid>
-        
+        <ListView MaxHeight="350" 
+                  
+                  ScrollViewer.CanContentScroll="False" 
+                  ScrollViewer.VerticalScrollBarVisibility="Visible"
+                  x:Name="listviewHistory" 
+                  Margin="0,50,0,48"  
+                  HorizontalAlignment="Center"  
+                  FontFamily="Book Antiqua" FontSize="16" FontWeight="Normal"
+                  IsSynchronizedWithCurrentItem="False" Width="800">
+            <ListView.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                 
+                    <GradientStop Color="#FFB79CD8" Offset="1"/>
+                </LinearGradientBrush>
+            </ListView.Background>
+
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Book.Name}" 
+                      Header="Name" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Book.Author}" 
+                      Header="Author" Width="200"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=ActiveTransaction}" 
+                      Header="ActiveTrans" Width="120"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=TakeTime}" 
+                      Header="Get" Width="150"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=ReturnTime}" 
+                      Header="Return" Width="150"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
     </Grid>
 </UserControl>

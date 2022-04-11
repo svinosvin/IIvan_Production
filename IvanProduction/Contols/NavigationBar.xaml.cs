@@ -1,4 +1,7 @@
-﻿using System;
+﻿using IvanProduction.Comands;
+using IvanProduction.State.Navigation;
+using IvanProduction.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +26,8 @@ namespace IvanProduction.Contols
         public NavigationBar()
         {
             InitializeComponent();
+         
+            
         }
     }
 }

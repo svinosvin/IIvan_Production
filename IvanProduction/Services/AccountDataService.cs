@@ -48,7 +48,7 @@ namespace IvanProduction.Services
 
             using (AppDbContext context = _contextFactory.CreateDbContext())
             {
-                Account entity = await context.Accounts.Include(x => x.AccountHolder).Include(x=> x.historyTransactions).FirstOrDefaultAsync(x => x.Id == id);
+                Account entity = await context.Accounts.Include(x => x.AccountHolder).Include(x=> (x.historyTransactions)).FirstOrDefaultAsync(x => x.Id == id);
                 return entity;
             }
         }
