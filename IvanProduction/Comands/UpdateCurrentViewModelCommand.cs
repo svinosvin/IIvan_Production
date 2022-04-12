@@ -1,5 +1,6 @@
 ﻿using IvanProduction.State.Navigation;
 using IvanProduction.ViewModels;
+using IvanProduction.ViewModels.AdminsViewModels;
 using System;
 using System.Windows.Input;
 
@@ -43,6 +44,29 @@ namespace IvanProduction.Comands
                         _navigator.CurrentViewModel = new AboutViewModel(); 
                         break;
 
+                }
+            }
+            if(parameter is AdminViewType)
+            {
+                AdminViewType viewType = (AdminViewType)parameter;
+                switch (viewType)
+                {
+                    case AdminViewType.NewAdmin:
+                        _navigator.CurrentViewModel = new AdminAdminsViewModel();
+                        break;
+                    case AdminViewType.History:
+                        _navigator.CurrentViewModel = new AdminHistoryViewModel();
+                        break;
+                    case AdminViewType.Profile:
+                        _navigator.CurrentViewModel = new AdminProfileViewModel();
+                        break;
+                    case AdminViewType.Books:
+                        _navigator.CurrentViewModel = new AdminBooksViewModel();
+                        break;
+                    case AdminViewType.Users:
+                        _navigator.CurrentViewModel = new AdminUsersViewModel();
+                        break;
+                    
                 }
             }
             

@@ -16,6 +16,17 @@ namespace IvanProduction.State.Navigation
         Profile,
         About
     }
+    public enum AdminViewType {
+        Profile,
+        NewAdmin,
+        History,
+        Users,
+        Books
+
+    }
+
+
+
     public interface INavigation
     {
         ViewModel CurrentViewModel { get; set; }       

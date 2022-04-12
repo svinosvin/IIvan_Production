@@ -270,6 +270,9 @@
     <Compile Include="Contols\BookCard.xaml.cs">
       <DependentUpon>BookCard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Contols\NavigationAdminBar.xaml.cs">
+      <DependentUpon>NavigationAdminBar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Contols\NavigationBar.xaml.cs">
       <DependentUpon>NavigationBar.xaml</DependentUpon>
     </Compile>
@@ -293,10 +296,31 @@
     <Compile Include="State\Navigation\INavigation.cs" />
     <Compile Include="State\Navigation\Navigator.cs" />
     <Compile Include="ViewModels\AboutViewModel.cs" />
+    <Compile Include="ViewModels\AdminsViewModels\AdminAdminsViewModel.cs" />
+    <Compile Include="ViewModels\AdminsViewModels\AdminBooksViewModel.cs" />
+    <Compile Include="ViewModels\AdminsViewModels\AdminHistoryViewModel.cs" />
+    <Compile Include="ViewModels\AdminsViewModels\AdminMainViewModel.cs" />
+    <Compile Include="ViewModels\AdminsViewModels\AdminProfileViewModel.cs" />
+    <Compile Include="ViewModels\AdminsViewModels\AdminUsersViewModel.cs" />
     <Compile Include="ViewModels\HistoryViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
     <Compile Include="ViewModels\ProfileViewModel.cs" />
     <Compile Include="ViewModels\UserMainWindowView.cs" />
+    <Compile Include="Views\AdminControls\AdminAdminsView.xaml.cs">
+      <DependentUpon>AdminAdminsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminControls\AdminBooksView.xaml.cs">
+      <DependentUpon>AdminBooksView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminControls\AdminHistoryView.xaml.cs">
+      <DependentUpon>AdminHistoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminControls\AdminProfileView.xaml.cs">
+      <DependentUpon>AdminProfileView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminControls\AdminUsersView.xaml.cs">
+      <DependentUpon>AdminUsersView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserContols\AboutView.xaml.cs">
       <DependentUpon>AboutView.xaml</DependentUpon>
     </Compile>
@@ -319,6 +343,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Contols\NavigationAdminBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Contols\NavigationBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -328,6 +356,26 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Styles\NavigationBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminControls\AdminAdminsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminControls\AdminBooksView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminControls\AdminHistoryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminControls\AdminProfileView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminControls\AdminUsersView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
