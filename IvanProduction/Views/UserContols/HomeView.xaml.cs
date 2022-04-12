@@ -4,6 +4,7 @@ using IvanProduction.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace IvanProduction.Views.UserContols
@@ -30,17 +31,23 @@ namespace IvanProduction.Views.UserContols
 
         private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            int id = Book.FirstOrDefault(x => x.Name == ((Button)sender).Name).Id;
+            
+            int id = Convert.ToInt32(((Button)sender).DataContext.ToString());
+            listviewUsers.SelectedIndex = Book.FirstOrDefault(x => x.Id == id).Id - 1;
             Book b = Book.FirstOrDefault(x => x.Id == Convert.ToInt32(id));
             b.Count = b.Count - 1;
             HistoryTransactions historyTransactions = new HistoryTransactions
             {
-                Account = UserMainWindowView.ActiveUser,
+                
+              
                 TakeTime = System.DateTime.Now,
                 ReturnTime = System.DateTime.Now.AddDays(30),
                 ActiveTransaction = true,
-                Book = b
+                
             };
+
+
+            Elements.HistoryElements.AddGoodTransaction(b, UserMainWindowView.ActiveUser, historyTransactions);
             UserMainWindowView.UpdateBook(b, Convert.ToInt32(id));
             UpdateTable();
 

@@ -17,7 +17,7 @@ namespace IvanProduction.Views.UserContols
             InitializeComponent();
             UpdateTable();
             
-        }
+         }
         public void UpdateTable()
         {
 

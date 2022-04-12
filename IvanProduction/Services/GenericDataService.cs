@@ -13,34 +13,23 @@ namespace IvanProduction.Services
     public class GenericDataService<T> : IDataService<T> where T : DomainObject
     {
         private readonly AppDbContextFactory _contextFactory;
-
+        private readonly NonQueryDataService<T> _nonQueryDataService;
         public GenericDataService(AppDbContextFactory appDbContext)
         {
             _contextFactory = appDbContext;
+            _nonQueryDataService = new NonQueryDataService<T>(appDbContext);
         }
 
         public async Task<T> Create(T entity)
         {
 
-            using (AppDbContext context = _contextFactory.CreateDbContext())
-            {
 
-               EntityEntry<T> createdResult =  await context.Set<T>().AddAsync(entity);
-               await context.SaveChangesAsync();
-               return createdResult.Entity;
-            }
+            return await _nonQueryDataService.Create(entity);
         }
 
         public async Task<bool> Delete(int id)
         {
-            using (AppDbContext context = _contextFactory.CreateDbContext())
-            {
-
-                T entityEntry = await context.Set<T>().FirstOrDefaultAsync((x) => x.Id == id);
-                context.Set<T>().Remove(entityEntry);
-                await context.SaveChangesAsync();
-                return true;
-            }
+            return await _nonQueryDataService.Delete(id);
         }
 
         public async Task<T> Get(int id)
@@ -64,15 +53,7 @@ namespace IvanProduction.Services
 
         public async Task<T> Update(int id, T entity)
         {
-            using (AppDbContext context = _contextFactory.CreateDbContext())
-            {
-                entity.Id = id;
-                context.Set<T>().Update(entity);
-                await context.SaveChangesAsync();
-                return entity;
-
-
-            }
+            return await _nonQueryDataService.Update(id, entity);
         }
     }
 }

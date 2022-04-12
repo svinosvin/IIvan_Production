@@ -289,6 +289,7 @@
     <Compile Include="Model\ObservableObject.cs" />
     <Compile Include="Services\AccountDataService.cs" />
     <Compile Include="Services\HistoryTransactionsDataService.cs" />
+    <Compile Include="Services\NonQueryDataService.cs" />
     <Compile Include="State\Navigation\INavigation.cs" />
     <Compile Include="State\Navigation\Navigator.cs" />
     <Compile Include="ViewModels\AboutViewModel.cs" />
@@ -307,6 +308,9 @@
     </Compile>
     <Compile Include="Views\UserContols\ProfileView.xaml.cs">
       <DependentUpon>ProfileView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Windows\AdminMainWindow.xaml.cs">
+      <DependentUpon>AdminMainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Windows\UserMainWindow.xaml.cs">
       <DependentUpon>UserMainWindow.xaml</DependentUpon>
@@ -340,6 +344,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UserContols\ProfileView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Windows\AdminMainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -17,10 +17,12 @@ namespace IvanProduction.ViewModels
         {
                 
             ActiveUser = Elements.AccountElements.GetAll().Result.FirstOrDefault(x => (x.AccountHolder.Id) == 1);
-            ActiveUser.historyTransactions = Elements.HistoryElements.GetAll().Result?.Where(x => x.Account.Id == ActiveUser.Id);
-
+            ActiveUser.historyTransactions = Elements.HistoryElements.GetAll().Result?.Where(x => x.Account.Id == ActiveUser.Id).ToList();
+            int k = 0;
+            k += k;
             //ActiveUser.AccountHolder = user;
-            // Elements.AccountElements.Create(new Account { AccountHolder = new User { Email = "321", Name = } })
+           
+           // Elements.AccountElements.Create(new Account { AccountHolder = new User { Email = "321" });
 
         }
 
@@ -29,7 +31,7 @@ namespace IvanProduction.ViewModels
         {
             ActiveUser.AccountHolder = acc;
             Elements.UserElements.Update(ActiveUser.Id, acc);
-
+           // ActiveUser.historyTransactions = Elements.HistoryElements.GetAll().Result?.Where(x => x.Account.Id == ActiveUser.Id);
 
         }
         public static void UpdateBook(Book book,int id)
@@ -37,8 +39,11 @@ namespace IvanProduction.ViewModels
             Elements.BooksElements.Update(id, book);
         }
 
-
-
+        public static  void UpdateHistories(HistoryTransactions hs)
+        {
+             Elements.HistoryElements.Create(hs);
+          //  UpdateAccount(ActiveUser.AccountHolder);
+        }
 
 
 

@@ -7,8 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Border>
-        <TextBlock TextAlignment="Center">Приложение было разработа в 2222 году, Хочу свою бутылкочку Dynamit за то что помогла мне в этот нелегкий момент</TextBlock>
+        <Border Background="#FFB79CD8">
+            <TextBlock TextAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"  FontSize="32" Foreground="White" >Приложение было разработа в 2222 году, Хочу поблагодарить свою бутылкочку Dynamit за то что помогла мне в этот нелегкий момент</TextBlock>
         </Border>
     </Grid>
 </UserControl>

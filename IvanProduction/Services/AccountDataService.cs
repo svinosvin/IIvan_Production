@@ -13,34 +13,23 @@ namespace IvanProduction.Services
     public class AccountDataService : IDataService<Account>
     {
         private readonly AppDbContextFactory _contextFactory;
-
+        private readonly NonQueryDataService<Account> _nonQueryDataService;
         public AccountDataService(AppDbContextFactory appDbContext)
         {
             _contextFactory = appDbContext;
+            _nonQueryDataService = new NonQueryDataService<Account>(appDbContext);
         }
 
         public async Task<Account> Create(Account entity)
         {
 
-            using (AppDbContext context = _contextFactory.CreateDbContext())
-            {
 
-                EntityEntry<Account> createdResult = await context.Set<Account>().AddAsync(entity);
-                await context.SaveChangesAsync();
-                return createdResult.Entity;
-            }
+            return await _nonQueryDataService.Create(entity);
         }
 
         public async Task<bool> Delete(int id)
         {
-            using (AppDbContext context = _contextFactory.CreateDbContext())
-            {
-
-                Account entityEntry = await context.Set<Account>().FirstOrDefaultAsync((x) => x.Id == id);
-                context.Set<Account>().Remove(entityEntry);
-                await context.SaveChangesAsync();
-                return true;
-            }
+            return await _nonQueryDataService.Delete(id);
         }
 
         public async Task<Account> Get(int id)
@@ -64,15 +53,7 @@ namespace IvanProduction.Services
 
         public async Task<Account> Update(int id, Account entity)
         {
-            using (AppDbContext context = _contextFactory.CreateDbContext())
-            {
-                entity.Id = id;
-                context.Accounts.Update(entity);
-                await context.SaveChangesAsync();
-                return entity;
-
-
-            }
+            return await _nonQueryDataService.Update(id, entity);
         }
     }
 }

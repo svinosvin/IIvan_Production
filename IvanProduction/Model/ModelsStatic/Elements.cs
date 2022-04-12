@@ -14,7 +14,7 @@ namespace IvanProduction.Model.ModelsStatic
         static public IDataService<Book> BooksElements { get; set; } = new GenericDataService<Book>(appDbContext);
         static public IDataService<User> UserElements { get; set; } = new GenericDataService<User>(appDbContext);
         static public IDataService<Account> AccountElements { get; set; } = new AccountDataService(appDbContext);
-        static public IDataService<HistoryTransactions> HistoryElements { get; set; } = new HistoryTransactionsDataService(appDbContext);
+        static public HistoryTransactionsDataService HistoryElements { get; set; } = new HistoryTransactionsDataService(appDbContext);
         static public IDataService<Admin> AdminsElements { get; set; } = new GenericDataService<Admin>(appDbContext);
 
 

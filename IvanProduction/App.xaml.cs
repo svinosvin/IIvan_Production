@@ -12,5 +12,6 @@ namespace IvanProduction
             //window.Show();
             base.OnStartup(e);
         }
+
     }
 }

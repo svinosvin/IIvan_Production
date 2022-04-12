@@ -11,7 +11,7 @@ namespace IvanProduction.Model
        
         public User AccountHolder { get; set; }
         public Status Status { get; set; }       
-        public IEnumerable<HistoryTransactions> historyTransactions { get; set; }
+        public ICollection <HistoryTransactions> historyTransactions { get; set; }
 
     }
 }

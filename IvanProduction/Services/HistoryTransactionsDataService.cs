@@ -13,34 +13,23 @@ namespace IvanProduction.Services
     public class HistoryTransactionsDataService:IDataService<HistoryTransactions>
     {
         private readonly AppDbContextFactory _contextFactory;
+        private readonly NonQueryDataService<HistoryTransactions> _nonQueryDataService;
 
         public HistoryTransactionsDataService(AppDbContextFactory appDbContext)
         {
             _contextFactory = appDbContext;
+            _nonQueryDataService = new NonQueryDataService<HistoryTransactions>(appDbContext);
         }
 
         public async Task<HistoryTransactions> Create(HistoryTransactions entity)
         {
 
-            using (AppDbContext context = _contextFactory.CreateDbContext())
-            {
-
-                EntityEntry<HistoryTransactions> createdResult = await context.Set<HistoryTransactions>().AddAsync(entity);
-                await context.SaveChangesAsync();
-                return createdResult.Entity;
-            }
+            return await _nonQueryDataService.Create(entity);
         }
 
         public async Task<bool> Delete(int id)
         {
-            using (AppDbContext context = _contextFactory.CreateDbContext())
-            {
-
-                HistoryTransactions entityEntry = await context.Set<HistoryTransactions>().FirstOrDefaultAsync((x) => x.Id == id);
-                context.Set<HistoryTransactions>().Remove(entityEntry);
-                await context.SaveChangesAsync();
-                return true;
-            }
+            return await _nonQueryDataService.Delete(id);
         }
 
         public async Task<HistoryTransactions> Get(int id)
@@ -64,15 +53,20 @@ namespace IvanProduction.Services
 
         public async Task<HistoryTransactions> Update(int id, HistoryTransactions entity)
         {
+            return await _nonQueryDataService.Update(id, entity);
+        }
+
+        public async Task AddGoodTransaction(Book book, Account account, HistoryTransactions hs) {
+
             using (AppDbContext context = _contextFactory.CreateDbContext())
             {
-                entity.Id = id;
-                context.Histories.Update(entity);
-                await context.SaveChangesAsync();
-                return entity;
-
-
+               
+                await context.Histories.AddAsync(hs);
+                hs.Book = book;
+                hs.Account = account;
+                context.SaveChanges();
             }
         }
+        
     }
 }

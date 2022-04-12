@@ -7,12 +7,13 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <ListView MaxHeight="350" 
+        <ListView  
                   
                   ScrollViewer.CanContentScroll="False" 
                   ScrollViewer.VerticalScrollBarVisibility="Visible"
-                  x:Name="listviewHistory" 
-                  Margin="0,50,0,48"  
+                  x:Name="listviewHistory"
+                  MaxHeight="450"  
+                  Margin="0 5"  
                   HorizontalAlignment="Center"  
                   FontFamily="Book Antiqua" FontSize="16" FontWeight="Normal"
                   IsSynchronizedWithCurrentItem="False" Width="800">
