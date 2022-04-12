@@ -38,7 +38,8 @@ namespace IvanProduction.Views.UserContols
                 Username = Username.Text.ToString(),
                 Surname = Surname.Text.ToString()
             };
-            UserMainWindowView.UpdateAccount(user); 
+            UserMainWindowView.UpdateAccount(user);
+            MessageBox.Show("Данные были изменены");
             
           } 
          

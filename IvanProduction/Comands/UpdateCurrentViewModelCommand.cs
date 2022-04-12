@@ -14,6 +14,7 @@ namespace IvanProduction.Comands
         public UpdateCurrentViewModelCommand(INavigation navigator)
         {
             _navigator = navigator;
+            Execute(ViewType.Home); 
            
         }
 

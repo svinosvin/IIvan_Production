@@ -22,6 +22,7 @@ namespace IvanProduction.Views.Windows
         public UserMainWindow()
         {
             InitializeComponent();
+            
         }
     }
 }
