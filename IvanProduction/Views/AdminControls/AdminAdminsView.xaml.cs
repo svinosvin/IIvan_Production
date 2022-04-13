@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IvanProduction.Model.ModelsStatic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace IvanProduction.Views.AdminControls
         public AdminAdminsView()
         {
             InitializeComponent();
+            this.listviewUsers.ItemsSource = Elements.AdminsElements.GetAll().Result.ToList();
         }
     }
 }

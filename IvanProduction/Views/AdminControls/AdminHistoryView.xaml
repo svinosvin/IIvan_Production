@@ -6,7 +6,43 @@
              xmlns:local="clr-namespace:IvanProduction.Views.AdminControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+    <Grid Margin="0" Background="{StaticResource BrushBackground2}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Foreground="White" FontSize="36" FontFamily="Arial Black">Active History</TextBlock>
+        <ListView Margin="0 0 0 0"
+                  MaxHeight="370" 
+                  Height="370"
+                  ScrollViewer.CanContentScroll="True" 
+                  ScrollViewer.VerticalScrollBarVisibility="Visible"
+                  Grid.Row="1"
+                  x:Name="listviewUsers"  
+                  HorizontalAlignment="Left"  
+                  FontFamily="Arial" FontSize="16" FontWeight="Normal"
+                  IsSynchronizedWithCurrentItem="False" 
+                  Background="#FFB79CD8"
+                  Width="780"
+                  MaxWidth="780"
+                  Padding="0">
+
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Book.Name}" 
+                      Header="Book Name" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Account.AccountHolder.Username}" 
+                      Header="Person" Width="150"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Account.AccountHolder.Email}" 
+                      Header="Email" Width="200"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=ActiveTransaction}" 
+                      Header="ActiveTrans" Width="120"/>
+                  
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=ReturnTime}" 
+                      Header="Return" Width="150"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </UserControl>

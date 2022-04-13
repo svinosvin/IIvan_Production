@@ -1,4 +1,6 @@
-﻿using System;
+﻿using IvanProduction.Model;
+using IvanProduction.Model.ModelsStatic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,32 @@ namespace IvanProduction.Views.AdminControls
     /// </summary>
     public partial class AdminHistoryView : UserControl
     {
+        public List<Account> Accounts { get; set; }
+        public List<HistoryTransactions> ht { get; set; } = new List<HistoryTransactions>();
         public AdminHistoryView()
         {
             InitializeComponent();
+            UpdateTable();  
+            
         }
+        public void UpdateTable()
+        {
+            Accounts = Elements.AccountElements.GetAll().Result.ToList();
+
+            foreach (var item in Accounts)
+            {
+                item.historyTransactions = Elements.HistoryElements.GetAll().Result.Where(x => x.Account.Id == item.Id).ToList();
+                foreach (var item1 in item.historyTransactions)
+                {
+                    item1.Account.AccountHolder = item.AccountHolder;
+                }
+                ht.AddRange(item.historyTransactions.Where(x => x.ActiveTransaction == true).ToList());
+            }
+            listviewUsers.ItemsSource = ht;
+
+
+        }
+
+
     }
 }

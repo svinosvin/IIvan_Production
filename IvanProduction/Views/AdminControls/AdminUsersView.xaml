@@ -6,7 +6,77 @@
              xmlns:local="clr-namespace:IvanProduction.Views.AdminControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+    <Grid Margin="0" Background="{StaticResource BrushBackground2}">
+        <Grid.RowDefinitions >
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Foreground="White" Grid.Row="0" FontSize="36" FontFamily="Arial Black">Users</TextBlock>
+
+        <ListView SelectionChanged="listviewUsers_SelectionChanged" ItemsSource="{Binding ElementName=listviewUsers, Path=SelectedItem.historyTransactions}"  Margin="0 0 0 0"
+                  MaxHeight="170" 
+                  Height="170"
+                  ScrollViewer.CanContentScroll="True" 
+                  ScrollViewer.VerticalScrollBarVisibility="Visible"
+                  Grid.Row="1"
+                  x:Name="listviewUsers"  
+                  HorizontalAlignment="Left"  
+                  FontFamily="Arial" FontSize="16" FontWeight="Normal"
+                  IsSynchronizedWithCurrentItem="False" 
+                  Background="#FFD06F59"
+                  Width="780"
+                  MaxWidth="780"
+                  Padding="0">
+
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=AccountHolder.Username}" 
+                      Header="Username" Width="200"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=AccountHolder.Email}" 
+                      Header="Email" Width="300"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=AccountHolder.Password}" 
+                      Header="Password" Width="100"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        
+        
+        
+        <ListView  
+                  MaxHeight="200" 
+                  Height="200"
+                  Grid.Row="2"  
+                  ScrollViewer.CanContentScroll="False" 
+                  ScrollViewer.VerticalScrollBarVisibility="Visible"
+                  x:Name="listviewHistory"
+                
+                  Margin="0 5"  
+                  HorizontalAlignment="Center"  
+                  FontFamily="Arial" FontSize="16" FontWeight="Normal"
+                  IsSynchronizedWithCurrentItem="False" Width="800">
+            <ListView.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+
+                    <GradientStop Color="#FFB79CD8" Offset="1"/>
+                </LinearGradientBrush>
+            </ListView.Background>
+
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Book.Name}" 
+                      Header="Name" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Book.Author}" 
+                      Header="Author" Width="200"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=ActiveTransaction}" 
+                      Header="ActiveTrans" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=TakeTime}" 
+                      Header="Get" Width="160"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=ReturnTime}" 
+                      Header="Return" Width="160"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
     </Grid>
 </UserControl>

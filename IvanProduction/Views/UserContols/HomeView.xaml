@@ -10,12 +10,14 @@
              mc:Ignorable="d" 
              
              d:DesignHeight="450" d:DesignWidth="800" >
-    <Grid>
+    <Grid Background="#FF0E584F">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" FontSize="36" FontFamily="Arial Black" VerticalAlignment="Top" HorizontalAlignment="Right">Get Book</TextBlock>
 
         <controls:BookCard Margin="10,30,300,0" Grid.Row="0" DataContext="{Binding ElementName=listviewUsers, Path=SelectedItem}"/>
 
