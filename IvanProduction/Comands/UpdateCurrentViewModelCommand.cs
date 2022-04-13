@@ -1,4 +1,5 @@
-﻿using IvanProduction.State.Navigation;
+﻿using IvanProduction.Model;
+using IvanProduction.State.Navigation;
 using IvanProduction.ViewModels;
 using IvanProduction.ViewModels.AdminsViewModels;
 using System;
@@ -15,8 +16,13 @@ namespace IvanProduction.Comands
         public UpdateCurrentViewModelCommand(INavigation navigator)
         {
             _navigator = navigator;
-            Execute(ViewType.Home); 
-           
+            if(!UserOrAdminActive.AdminActive)
+                Execute(ViewType.Home); 
+            else
+               Execute(AdminViewType.Profile);
+
+
+
         }
 
         public bool CanExecute(object parameter)

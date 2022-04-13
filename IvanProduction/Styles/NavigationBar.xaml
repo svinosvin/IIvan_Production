@@ -44,7 +44,7 @@
     
     <Style x:Key="AdminNavButton" TargetType="RadioButton">
         <Setter Property="Foreground" Value="White"/>
-        <Setter Property="Padding" Value="10 10"/>
+        <Setter Property="Padding" Value="10 10 40 10"/>
         <Setter Property="FontSize" Value="16"/>
         <Setter Property="Background" Value="{StaticResource BrushPrimary3}"/>
         <Setter Property="Template">
@@ -68,14 +68,14 @@
             <EventTrigger RoutedEvent="MouseEnter">
                 <BeginStoryboard>
                     <Storyboard>
-                        <ColorAnimation To="{StaticResource ColorPrimary3}" Duration="0:0:0.1" Storyboard.TargetProperty="Background.Color"></ColorAnimation>
+                        <ColorAnimation To="{StaticResource ColorPrimary4}" Duration="0:0:0.1" Storyboard.TargetProperty="Background.Color"></ColorAnimation>
                     </Storyboard>
                 </BeginStoryboard>
             </EventTrigger>
             <EventTrigger RoutedEvent="MouseLeave">
                 <BeginStoryboard>
                     <Storyboard>
-                        <ColorAnimation To="{StaticResource ColorPrimary4}" Duration="0:0:0.1" Storyboard.TargetProperty="Background.Color"></ColorAnimation>
+                        <ColorAnimation To="{StaticResource ColorPrimary3}" Duration="0:0:0.1" Storyboard.TargetProperty="Background.Color"></ColorAnimation>
                     </Storyboard>
                 </BeginStoryboard>
             </EventTrigger>

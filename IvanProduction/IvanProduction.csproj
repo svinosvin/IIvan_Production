@@ -290,6 +290,7 @@
     </Compile>
     <Compile Include="Model\ModelsStatic\Elements.cs" />
     <Compile Include="Model\ObservableObject.cs" />
+    <Compile Include="Model\UserOrAdminActive.cs" />
     <Compile Include="Services\AccountDataService.cs" />
     <Compile Include="Services\HistoryTransactionsDataService.cs" />
     <Compile Include="Services\NonQueryDataService.cs" />

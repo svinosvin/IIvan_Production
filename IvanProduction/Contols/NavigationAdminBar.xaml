@@ -15,7 +15,10 @@
             </Grid.ColumnDefinitions>
             <Border Grid.Column="0" Background="{StaticResource BrushPrimary3}">
 
-                <Grid>
+                <Grid RenderOptions.EdgeMode="Aliased">
+                    <Grid.Resources >
+                        <Style TargetType="RadioButton" BasedOn="{StaticResource AdminNavButton}"/>
+                    </Grid.Resources>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
@@ -24,15 +27,11 @@
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
-
-
                     </Grid.RowDefinitions>
-                    <Grid.Resources >
-                        <Style TargetType="RadioButton" BasedOn="{StaticResource AdminNavButton}"/>
-                    </Grid.Resources>
+                    
+                   
 
-                    <TextBlock Text="Library IIvan" Background="{StaticResource BrushPrimary4}" Grid.Row="0" Foreground="White" Padding="5" FontSize="25" />
-                    <RadioButton  Margin="0 2 0 0" x:Name="rb1" IsChecked="True" Grid.Row="1" Content="Profile"  Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:AdminViewType.Profile}"/>
+                    <RadioButton   Margin="0 2 0 0" x:Name="rb1" IsChecked="True" Grid.Row="1" Content="Profile"  Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:AdminViewType.Profile}"/>
                     <RadioButton   Grid.Row="2" Content="History"  Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static  nav:AdminViewType.History}"/>
                     <RadioButton   Grid.Row="3" Content="Books"  Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static  nav:AdminViewType.Books}"/>
                     <RadioButton   Grid.Row="4" Content="Admins"  Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static  nav:AdminViewType.NewAdmin}"/>

@@ -4,8 +4,10 @@
              xmlns:local="clr-namespace:IvanProduction"
              xmlns:vm="clr-namespace:IvanProduction.ViewModels"
              xmlns:v="clr-namespace:IvanProduction.Views.UserContols"
+             xmlns:vmA="clr-namespace:IvanProduction.ViewModels.AdminsViewModels"
+             xmlns:vA="clr-namespace:IvanProduction.Views.AdminControls"
              
-             StartupUri="Views/Windows/UserMainWindow.xaml">
+             StartupUri="Views/Windows/AdminMainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -25,6 +27,22 @@
             <DataTemplate DataType="{x:Type vm:AboutViewModel}">
                 <v:AboutView/>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type vmA:AdminAdminsViewModel}">
+                <vA:AdminAdminsView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vmA:AdminBooksViewModel}">
+                <vA:AdminBooksView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vmA:AdminHistoryViewModel}">
+                <vA:AdminHistoryView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vmA:AdminProfileViewModel}">
+                <vA:AdminProfileView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vmA:AdminUsersViewModel}">
+                <vA:AdminUsersView/>
+            </DataTemplate>
+
         </ResourceDictionary>
         
     </Application.Resources>
