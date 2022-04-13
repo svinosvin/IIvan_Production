@@ -19,7 +19,7 @@ namespace IvanProduction.Comands
             if(!UserOrAdminActive.AdminActive)
                 Execute(ViewType.Home); 
             else
-               Execute(AdminViewType.Profile);
+               Execute(AdminViewType.Books);
 
 
 

@@ -270,6 +270,12 @@
     <Compile Include="Contols\BookCard.xaml.cs">
       <DependentUpon>BookCard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Contols\BookCardAdd.xaml.cs">
+      <DependentUpon>BookCardAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Contols\BookCardEdit.xaml.cs">
+      <DependentUpon>BookCardEdit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Contols\NavigationAdminBar.xaml.cs">
       <DependentUpon>NavigationAdminBar.xaml</DependentUpon>
     </Compile>
@@ -341,6 +347,14 @@
       <DependentUpon>UserMainWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Contols\BookCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Contols\BookCardAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Contols\BookCardEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

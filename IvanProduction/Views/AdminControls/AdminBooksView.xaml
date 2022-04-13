@@ -4,9 +4,64 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:IvanProduction.Views.AdminControls"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:controls="clr-namespace:IvanProduction.Contols"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="500" d:DesignWidth="850">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <controls:BookCardEdit Grid.Column="0" DataContext="{Binding ElementName=listviewUsers, Path=SelectedItem}"/>
+            <controls:BookCardAdd Grid.Column="1"/>
+
+
+        </Grid>
+
+        <Button Grid.Row="1" Padding="8" Click="Button_Click_1" Background="#FFE66CC9">Обновить</Button>
+        <ListView  Margin="0 0 0 0"
+                  MaxHeight="170" 
+                  ScrollViewer.CanContentScroll="True" 
+                  ScrollViewer.VerticalScrollBarVisibility="Visible"
+                  Grid.Row="2"
+                  x:Name="listviewUsers"  
+                  HorizontalAlignment="Left"  
+                   
+                  FontFamily="Book Antiqua" FontSize="16" FontWeight="Normal"
+                  IsSynchronizedWithCurrentItem="False" 
+                  Background="#FF128FB2" Width="780"
+                  Padding="0">
+
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" 
+                      Header="Name" Width="200"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Author}" 
+                      Header="Author" Width="300"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Count}" 
+                      Header="Count" Width="100"></GridViewColumn>
+                    <GridViewColumn Header="" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Click="Button_Click" DataContext="{Binding Path=Id}" Foreground="White" Background="#FFFF0B0B" Padding="4">
+                                    Удалить
+                                </Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </UserControl>

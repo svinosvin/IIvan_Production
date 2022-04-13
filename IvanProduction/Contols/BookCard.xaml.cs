@@ -24,5 +24,7 @@ namespace IvanProduction.Contols
         {
             InitializeComponent();
         }
+
+        
     }
 }

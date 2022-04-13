@@ -31,7 +31,7 @@
                     
                    
 
-                    <RadioButton   Margin="0 2 0 0" x:Name="rb1" IsChecked="True" Grid.Row="1" Content="Profile"  Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:AdminViewType.Profile}"/>
+                    <RadioButton   Margin="0 0 0 0" x:Name="rb1" IsChecked="True" Grid.Row="1" Content="Profile"  Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:AdminViewType.Profile}"/>
                     <RadioButton   Grid.Row="2" Content="History"  Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static  nav:AdminViewType.History}"/>
                     <RadioButton   Grid.Row="3" Content="Books"  Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static  nav:AdminViewType.Books}"/>
                     <RadioButton   Grid.Row="4" Content="Admins"  Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static  nav:AdminViewType.NewAdmin}"/>
