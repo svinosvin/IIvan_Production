@@ -10,6 +10,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
 
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Foreground="White" FontSize="36" FontFamily="Arial Black">Active History</TextBlock>
@@ -44,5 +46,6 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        
     </Grid>
 </UserControl>
