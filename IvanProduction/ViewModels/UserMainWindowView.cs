@@ -12,14 +12,12 @@ namespace IvanProduction.ViewModels
 
         static public Account ActiveUser { get; set; } = new Account();
 
-
         public UserMainWindowView(/*User user*/)
         {
                 
-            ActiveUser = Elements.AccountElements.GetAll().Result.FirstOrDefault(x => (x.AccountHolder.Id) == 1);
+          
             ActiveUser.historyTransactions = Elements.HistoryElements.GetAll().Result?.Where(x => x.Account.Id == ActiveUser.Id).ToList();
-            int k = 0;
-            k += k;
+            
             //ActiveUser.AccountHolder = user;
            
            // Elements.AccountElements.Create(new Account { AccountHolder = new User { Email = "321" });

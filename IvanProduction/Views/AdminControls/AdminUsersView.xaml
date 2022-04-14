@@ -11,6 +11,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <TextBlock Foreground="White" Grid.Row="0" FontSize="36" FontFamily="Arial Black">Users</TextBlock>
 
@@ -40,13 +41,13 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        
-        
-        
+
+        <TextBlock Foreground="White" Grid.Row="2" FontSize="20" FontFamily="Arial Black">Their history:</TextBlock>
+
         <ListView  
                   MaxHeight="200" 
                   Height="200"
-                  Grid.Row="2"  
+                  Grid.Row="3"  
                   ScrollViewer.CanContentScroll="False" 
                   ScrollViewer.VerticalScrollBarVisibility="Visible"
                   x:Name="listviewHistory"

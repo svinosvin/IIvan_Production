@@ -7,7 +7,7 @@
              xmlns:vmA="clr-namespace:IvanProduction.ViewModels.AdminsViewModels"
              xmlns:vA="clr-namespace:IvanProduction.Views.AdminControls"
              
-             StartupUri="Views/Windows/AdminMainWindow.xaml">
+             StartupUri="Views/Windows/Login.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

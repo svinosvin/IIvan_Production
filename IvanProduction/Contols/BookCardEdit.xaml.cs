@@ -29,19 +29,26 @@ namespace IvanProduction.Contols
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            b = (Book)this.DataContext;
-            if (String.IsNullOrWhiteSpace(tboxA.Text) || String.IsNullOrWhiteSpace(tboxC.Text) || String.IsNullOrWhiteSpace(tboxD.Text))
-                MessageBox.Show("Поля не заполнены!");
-            else
+            b = (Book)this.DataContext;          
+            try
             {
-                b.Count = Convert.ToInt32(tboxC.Text);
-                b.Author = tboxA.Text;
-                b.Description = tboxD.Text;
-                Elements.BooksElements.Update(b.Id, b);
-                MessageBox.Show("Элемент изменен!");
+                if (String.IsNullOrWhiteSpace(tboxA.Text) || String.IsNullOrWhiteSpace(tboxC.Text) || String.IsNullOrWhiteSpace(tboxD.Text))
+                    MessageBox.Show("Поля не заполнены!");
+                else
+                {
+                    b.Count = Convert.ToInt32(tboxC.Text);
+                    b.Author = tboxA.Text;
+                    b.Description = tboxD.Text;
+                    Elements.BooksElements.Update(b.Id, b);
+                    MessageBox.Show("Элемент изменен!");
+
+                }
 
             }
-
+            catch (Exception)
+            {
+                MessageBox.Show("Поля не заполнены или некорректны!");
+            }
         }
         
     }

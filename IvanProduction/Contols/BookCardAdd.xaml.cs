@@ -29,28 +29,37 @@ namespace IvanProduction.Contols
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            if (String.IsNullOrWhiteSpace(tboxA.Text) || String.IsNullOrWhiteSpace(tboxN.Text) || String.IsNullOrWhiteSpace(tboxC.Text))
+            try
             {
-                MessageBox.Show("Поля не заполнены или некорректны!"); }
-            else
-            {
-                Book b = new Book
+                if (String.IsNullOrWhiteSpace(tboxA.Text) || String.IsNullOrWhiteSpace(tboxN.Text) || String.IsNullOrWhiteSpace(tboxC.Text))
                 {
-                    Author = tboxA.Text,
-                    Count = Convert.ToInt32(tboxC.Text),
-                    Description = tboxD.Text,
-                    Name = tboxN.Text
-                };
-                Elements.BooksElements.Create(b);
-                MessageBox.Show("Книга добавлена, Обновите!");
-                tboxA.Text = "";
-                tboxC.Text = "";
-                tboxD.Text = "";
-                tboxN.Text = "";
+                    MessageBox.Show("Поля не заполнены или некорректны!");
+                }
+                else
+                {
+                    Book b = new Book
+                    {
+                        Author = tboxA.Text,
+                        Count = Convert.ToInt32(tboxC.Text),
+                        Description = tboxD.Text,
+                        Name = tboxN.Text
+                    };
+                    Elements.BooksElements.Create(b);
+                    MessageBox.Show("Книга добавлена, Обновите!");
+                    tboxA.Text = "";
+                    tboxC.Text = "";
+                    tboxD.Text = "";
+                    tboxN.Text = "";
 
+                }
 
             }
-
+            catch (Exception)
+            {
+                MessageBox.Show("Поля не заполнены или некорректны!");
+            }
+        
+           
 
 
 

@@ -1,5 +1,9 @@
 ﻿using IvanProduction.Model;
+using IvanProduction.Model.ModelsStatic;
 using IvanProduction.Services;
+using IvanProduction.ViewModels;
+using IvanProduction.ViewModels.AdminsViewModels;
+using IvanProduction.Views.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -70,6 +74,69 @@ namespace IvanProduction
         private void checkbox_Unchecked(object sender, RoutedEventArgs e)
         {
             RegBtn.Visibility = Visibility.Visible;
+        }
+
+        private void LogBtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (checkbox.IsChecked == false)
+                {
+                    string pass = PasswordTB.Password;
+                    string log = LoginTB.Text;
+                    Account a = Elements.AccountElements.GetAll().Result.FirstOrDefault(x => x.AccountHolder.Password == pass && log == x.AccountHolder.Username);
+                    if (a==null)
+                    {
+                        MessageBox.Show("Неверный логин или пароль!");
+                    }
+                    else
+                    {
+                        UserOrAdminActive.AdminActive = false;
+                        UserMainWindowView.ActiveUser = a;
+                        Window window = new UserMainWindow();
+                        window.Owner = this;
+                        this.Hide();
+                        window.Show();
+                    }
+                }
+                else
+                {
+                    string pass = PasswordTB.Password;
+                    string log = LoginTB.Text;
+                    Admin a = Elements.AdminsElements.GetAll().Result.FirstOrDefault(x => x.Password == pass && log == x.Username);
+                    if (a==null)
+                    
+                    {
+                        MessageBox.Show("Неверный логин или пароль!");
+                    }
+                    else
+                    {
+                        UserOrAdminActive.AdminActive = true;
+                        AdminMainViewModel.ActiveAdmin = a;
+                        Window window = new AdminMainWindow();
+                        window.Owner = this;
+                        this.Hide();
+                        window.Show();
+                    }
+                }
+                
+
+            }
+            catch
+            {
+                MessageBox.Show("Неверный логин или пароль!");
+            }
+
+
+        }
+
+        private void RegBtn_Click(object sender, RoutedEventArgs e)
+        {
+            
+            Window window = new RegistryWindow();
+            window.Owner = this;
+            this.Hide();
+            window.Show();
         }
     }
 }

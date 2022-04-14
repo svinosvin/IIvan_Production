@@ -1,4 +1,5 @@
 ﻿using IvanProduction.Model.ModelsStatic;
+using IvanProduction.Views.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,23 @@ namespace IvanProduction.Views.AdminControls
         public AdminAdminsView()
         {
             InitializeComponent();
+            Update();
+        }
+        public void Update()
+        {
             this.listviewUsers.ItemsSource = Elements.AdminsElements.GetAll().Result.ToList();
+        } 
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Window f = new AddAdmin();   
+            f.Show();
+           
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Update();
         }
     }
 }

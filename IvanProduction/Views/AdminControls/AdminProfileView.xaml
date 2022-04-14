@@ -6,7 +6,47 @@
              xmlns:local="clr-namespace:IvanProduction.Views.AdminControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+    <Border Margin="0" BorderBrush="Black" Background="{StaticResource BrushBackground2}"  BorderThickness="1">
+
+
+        <Grid x:Name="form1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="11*"/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions >
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Background="#FF3379EA" Grid.ColumnSpan="2" Grid.Row="0" Margin="0 0 0 60" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock  VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5" Text="My Profile" Foreground="White" FontSize="26" FontFamily="Arial Black" Grid.Column="0" Grid.Row="1" />
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5" Text="Job Position:" Foreground="White" FontSize="19" FontFamily="Arial Black" Grid.Column="2" Grid.Row="1" />
+                <TextBlock  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="19" FontFamily="Arial Black"  Text="{Binding Path=JobPosition}"   Grid.Column="4" />
+
+            </Grid>
+
+            <TextBlock  Margin="5,5,5,5" Text="Name:" FontSize="20" Foreground="Wheat" Grid.Column="0" Grid.Row="1" />
+            <TextBox x:Name="Name"  Text="{Binding  Path=Name}" Grid.Column="1" Grid.Row="1" Margin="5,5,5,5" FontSize="20"/>
+            <TextBlock Margin="5,5,5,5" Text="Surname:" Foreground="Wheat" FontSize="20" Grid.Column="0" Grid.Row="2" />
+            <TextBox  x:Name="Surname" Text="{Binding Path=Surname}" Grid.Column="1" Grid.Row="2" Margin="5,5,5,5" FontSize="20"/>
+            <TextBlock Margin="5,5,5,5" Text="Username" Foreground="Wheat" FontSize="20" Grid.Column="0" Grid.Row="3" />
+            <TextBox x:Name="Username" Text="{Binding Path=Username}" Grid.Column="1" Grid.Row="3" Margin="5,5,5,5" FontSize="20"/>
+            <TextBlock  Foreground="Wheat" Margin="5,5,5,5" Text="Password" FontSize="20" Grid.Column="0" Grid.Row="4" />
+            <TextBox x:Name="Password" Text="{Binding Path=Password}" Grid.Column="1" Grid.Row="4" Margin="5,5,5,5" FontSize="20"/>
+            <TextBlock  Margin="5,5,5,5" Text="Email" Foreground="Wheat" FontSize="20" Grid.Column="0" Grid.Row="5" />
+            <TextBox x:Name="Email" Text="{Binding Path=Email}"  Grid.Column="1" Grid.Row="5" Margin="5,5,5,5" FontSize="20"/>
+            <Button Click="Button_Click" Content="Save" FontWeight="Bold" BorderBrush="Black" FontSize="30" Margin="5,50,0,50" Background="Violet"  Width="300" Grid.Column="0" HorizontalAlignment="Left"  Grid.Row="6" ></Button>
+        </Grid>
+    </Border>
 </UserControl>

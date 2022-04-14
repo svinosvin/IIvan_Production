@@ -23,5 +23,10 @@ namespace IvanProduction.Views.Windows
         {
             InitializeComponent();
         }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+        }
     }
 }
