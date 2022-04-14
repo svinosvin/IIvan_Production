@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:IvanProduction.Views.Windows"
         xmlns:controls="clr-namespace:IvanProduction.Contols"
         xmlns:vm="clr-namespace:IvanProduction.ViewModels"
+         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"  
         mc:Ignorable="d"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
         Title="UserMainWindow" Height="590" Width="944" Closing="Window_Closing">
@@ -19,7 +20,16 @@
             <RowDefinition Height="*"/>
 
         </Grid.RowDefinitions>
+        
         <controls:NavigationBar Grid.Row="0" DataContext="{Binding Navigator}"/>
+        <Button Click="Button_Click" Cursor="Hand" Width="29"  Height="29"  Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <iconPacks:PackIconMaterial Grid.Row="0" Kind="ArrowLeftBold"                                           
+                                        Foreground="White"
+                                        Height="25"
+                                        Width="25"
+                                        Background="#FF4A1414"
+                                       />
+        </Button>
         <ContentControl Grid.Row="1" Content="{Binding Navigator.CurrentViewModel}"/>
     </Grid>
     

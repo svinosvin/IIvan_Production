@@ -6,9 +6,20 @@
              xmlns:local="clr-namespace:IvanProduction.Views.UserContols"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <Border Background="#FF0E584F">
-            <TextBlock TextAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"  FontSize="32" Foreground="White" >Приложение было разработа в 2222 году, Хочу поблагодарить свою бутылкочку Dynamit за то что помогла мне в этот нелегкий момент</TextBlock>
-        </Border>
+    <Border Background="#FF0E584F">
+        <Grid>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+
+            <TextBlock Grid.Row="0" TextAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"  FontSize="32" Foreground="White" >Приложение было разработа в 2022 году, Разработчик: Иванец А.Р. </TextBlock>
+
+            <TextBlock Grid.Row="1"  TextAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"  FontSize="32" Foreground="White" > Обратиться за помощью: Email - artemivanets@bk.ru </TextBlock>
+           
+        
     </Grid>
+    </Border>
 </UserControl>

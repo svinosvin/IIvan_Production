@@ -30,5 +30,10 @@ namespace IvanProduction.Views.Windows
             this.Owner.Show();
             
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
