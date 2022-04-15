@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="IvanProduction.Views.AdminControls.AdminAdminsView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AdminControls\AdminAdminsView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" Collapsed="true" />
+  </Class>
+  <Class Name="IvanProduction.Views.AdminControls.AdminBooksView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAABAAAAAAAUAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AdminControls\AdminBooksView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IvanProduction.Views.AdminControls.AdminHistoryView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAADAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AdminControls\AdminHistoryView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IvanProduction.Views.AdminControls.AdminUsersView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAgAAAAAAAAIAAAQAAIQAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Views\AdminControls\AdminUsersView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IvanProduction.Views.AdminControls.AdminProfileView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AdminControls\AdminProfileView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IvanProduction.ViewModels.Base.ViewModel" Collapsed="true">
+    <Position X="8" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Base\ViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.State.Navigation.Navigator" BaseTypeListCollapsed="true">
+    <Position X="23" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>State\Navigation\Navigator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IvanProduction.Contols.BookCard" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contols\BookCard.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IvanProduction.Contols.BookCardAdd" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contols\BookCardAdd.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IvanProduction.Contols.BookCardEdit" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Contols\BookCardEdit.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IvanProduction.Contols.NavigationAdminBar" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contols\NavigationAdminBar.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IvanProduction.Contols.NavigationBar" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contols\NavigationBar.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IvanProduction.Comands.UpdateCurrentViewModelCommand" Collapsed="true">
+    <Position X="12.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACIAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Comands\UpdateCurrentViewModelCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="IvanProduction.Data.AppDbContext">
+    <Position X="5.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACBAAAAAAAAAAAAAAQAAkAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\AppDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.Data.AppDbContextFactory">
+    <Position X="8.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\AppDbContextFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="IvanProduction.Model.ModelsStatic.Elements">
+    <Position X="11.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQBgAAAEAAAAAAIAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\ModelsStatic\Elements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.Model.ModelsStatic.RegularExp">
+    <Position X="8" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAgAAAQAAAAAAAAAAAiA=</HashCode>
+      <FileName>Model\ModelsStatic\RegularExp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.Views.UserContols.AboutView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\UserContols\AboutView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IvanProduction.Views.UserContols.HistoryView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\UserContols\HistoryView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IvanProduction.Views.UserContols.HomeView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAUAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\UserContols\HomeView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IvanProduction.Views.UserContols.ProfileView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Views\UserContols\ProfileView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IvanProduction.Views.Windows.AddAdmin" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAACCAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Windows\AddAdmin.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IvanProduction.Views.Windows.AdminMainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Windows\AdminMainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IvanProduction.Views.Windows.RegistryWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAEAAAAAAACCAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Windows\RegistryWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IvanProduction.Views.Windows.UserMainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Windows\UserMainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IvanProduction.Model.Account" Collapsed="true">
+    <Position X="10.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAIAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Account.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.Model.Admin" Collapsed="true">
+    <Position X="15" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAQAAAAQABAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Admin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.Model.Book" Collapsed="true">
+    <Position X="17.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAgAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.Model.DomainObject" Collapsed="true">
+    <Position X="15" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\DomainObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.Model.HistoryTransactions" Collapsed="true">
+    <Position X="12.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAABAAAAAAAAAAAAAAAAARAAAAAAAAEA=</HashCode>
+      <FileName>Model\HistoryTransactions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.Model.ObservableObject" Collapsed="true">
+    <Position X="18.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\ObservableObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="IvanProduction.Model.Status" Collapsed="true">
+    <Position X="20.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Status.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.Model.User" Collapsed="true">
+    <Position X="19.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAQAAAAQABAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Model\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.Model.UserOrAdminActive" Collapsed="true">
+    <Position X="22.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Model\UserOrAdminActive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.Services.AccountDataService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAIAAEAAEAAAgAEAAAAAAA=</HashCode>
+      <FileName>Services\AccountDataService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IvanProduction.Services.GenericDataService&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAIAAEAAEAAAgAEAAAAAAA=</HashCode>
+      <FileName>Services\GenericDataService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IvanProduction.Services.HistoryTransactionsDataService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAIAAEAAEAAQgAEAAAAAAA=</HashCode>
+      <FileName>Services\HistoryTransactionsDataService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IvanProduction.Services.NonQueryDataService&lt;T&gt;" Collapsed="true">
+    <Position X="20.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAIAAEAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\NonQueryDataService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.ViewModels.AboutViewModel" Collapsed="true">
+    <Position X="2.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\AboutViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.ViewModels.HistoryViewModel" Collapsed="true">
+    <Position X="5.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\HistoryViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.ViewModels.HomeViewModel" Collapsed="true">
+    <Position X="12.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\HomeViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.ViewModels.MainWindowViewModel" Collapsed="true">
+    <Position X="19.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\MainWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.ViewModels.ProfileViewModel" Collapsed="true">
+    <Position X="1.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ProfileViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.ViewModels.UserMainWindowView" Collapsed="true">
+    <Position X="8" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEAAAAAABAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\UserMainWindowView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.ViewModels.AdminsViewModels.AdminAdminsViewModel" Collapsed="true">
+    <Position X="14.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\AdminsViewModels\AdminAdminsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.ViewModels.AdminsViewModels.AdminBooksViewModel" Collapsed="true">
+    <Position X="21.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\AdminsViewModels\AdminBooksViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.ViewModels.AdminsViewModels.AdminHistoryViewModel" Collapsed="true">
+    <Position X="3.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\AdminsViewModels\AdminHistoryViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.ViewModels.AdminsViewModels.AdminMainViewModel" Collapsed="true">
+    <Position X="10.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\AdminsViewModels\AdminMainViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.ViewModels.AdminsViewModels.AdminProfileViewModel" Collapsed="true">
+    <Position X="17" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\AdminsViewModels\AdminProfileViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IvanProduction.ViewModels.AdminsViewModels.AdminUsersViewModel" Collapsed="true">
+    <Position X="23.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\AdminsViewModels\AdminUsersViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="IvanProduction.State.Navigation.INavigation">
+    <Position X="1.25" Y="1.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>State\Navigation\INavigation.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IvanProduction.Services.IDataService&lt;T&gt;" Collapsed="true">
+    <Position X="18.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Services\IDataService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="IvanProduction.State.Navigation.ViewType">
+    <Position X="3" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAQAAAAAABACAAAAAAA=</HashCode>
+      <FileName>State\Navigation\INavigation.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="IvanProduction.State.Navigation.AdminViewType">
+    <Position X="1.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAgAAACAAAABACAAAAAAA=</HashCode>
+      <FileName>State\Navigation\INavigation.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
