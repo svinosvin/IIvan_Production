@@ -30,13 +30,13 @@
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Book.Name}" 
                       Header="Name" Width="150"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Book.Author}" 
-                      Header="Author" Width="200"/>
+                      Header="Author" Width="170"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=ActiveTransaction}" 
                       Header="ActiveTrans" Width="120"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Account.AccountHolder.Username}" 
-                      Header="Get" Width="150"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=TakeTime}" 
+                      Header="Get" Width="170"></GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=ReturnTime}" 
-                      Header="Return" Width="150"></GridViewColumn>
+                      Header="Return" Width="170"></GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
